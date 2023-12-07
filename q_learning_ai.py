@@ -26,10 +26,10 @@ def main():
     # 하이퍼파라미터
     learning_rate = 0.8
     discount_factor = 0.95
-    num_episodes = 200
+    num_episodes = 1000
 
 
-    model = get_model(num_actions)    
+    model = get_model(num_actions)  
 
     criterion = nn.L1Loss()
     optim = torch.optim.Adam(lr=1e-3, params=model.parameters())
@@ -109,10 +109,11 @@ def main():
             break
 
     # 결과 출력
+    print('%d 에피소드 결과'%num_episodes)
     if len(path) > 100:
-        print(" 경로 탐색 실패")
+        print("인공지능 결과 경로 탐색 실패")
     else:
-        print("최단 경로:", path)
+        print("인공지능 결과 최단 경로:", path)
 
 
 if __name__ =='__main__':

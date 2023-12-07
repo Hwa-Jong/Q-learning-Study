@@ -60,7 +60,7 @@ def main():
         path.append(state)
 
     # 결과 출력
-    print("최단 경로:", path)
+    print("알고리즘 결과 최단 경로:", path)
 
 
 if __name__ =='__main__':
